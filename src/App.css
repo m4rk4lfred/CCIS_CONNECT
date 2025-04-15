@@ -1,0 +1,299 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Jersey 20", sans-serif;
+}
+header{
+  display: flex;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 5em;
+  border-bottom:2px solid #FF9E01;
+  box-shadow: 0px 0px 50px 1px gray;
+  z-index: 9999;
+}
+.header-logo{
+  width: 13%;
+  min-width: 50px;
+  margin: 0 0.2em 0 2.4em;
+  
+}
+/*CSS FOR THE LEFT SIDE OF THE HEADER*/
+.header-branding-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  width: 50%;
+  min-width: 100px;
+  color: #04045E;
+  flex-shrink: 1;;
+
+}
+.header-branding-div h1{
+ font-size: 4vw;
+}
+.design-1{
+  color: #FF9E01;
+}
+
+/* CSS FOR THE RIGHT SIDE OF THE HEADER*/
+nav{
+  display: flex;
+  width: 80%;
+  background-color: transparent;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 1;
+  padding: 2em;
+  box-sizing: border-box;
+  
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  margin: 0 2em ;
+  flex-shrink: 1;
+}
+nav li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0.5em;
+  background-color: transparent;
+  width: 6em;
+  height: 2em;
+  border: 1px solid #04045E;
+  border-radius: 12px;
+  font-size: 1fr;
+  flex-shrink: 1;
+}
+nav li:hover a{
+  background-color: #04045E;
+  color: #FF9E01;
+}
+
+nav a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 1;
+  color: #04045E;
+}
+
+.content{
+   width: 100vw;
+   height: 90vh;
+   background-color: #f7f7f7;
+   z-index: -2;
+}
+.homeSection{
+  width: 100%;
+  background-color: #f7f7f7;
+  height: 83%;
+  box-sizing: border-box;
+  padding: 2em;
+  z-index: 5;
+}
+.homesection-upper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 65%;
+  background-color: transparent;
+  font-size: 3rem;
+  padding: 1em;
+  box-sizing: border-box;
+  color: #04045E;
+  flex-shrink: 1;
+  z-index: 5;
+}
+
+.homesection-upper h2{
+ z-index: 5;
+}
+
+.submitButton {
+height: 60%;
+width: 20%;
+margin: 0 1em 0 1em;
+background-color: transparent;
+border: 2px solid #FF9E01;
+border-radius: 10px;
+transition: background-color 0.2s ease-in-out;
+font-size: 1.2em;
+z-index: 2;
+}
+
+.submitButton:hover{
+  background-color: #FF9E01;
+  cursor: pointer;
+}
+
+.homesection-email-div{
+background-color: transparent;
+width: 45%;
+height: 4em;
+margin: 1em 3em;
+display: flex;
+justify-content: center;
+align-items: center;
+min-width: 450px;
+z-index: 2;
+
+}
+.homesection-email-div input{
+  width: 80%;
+  height: 30%;
+  padding: 1em;
+  border-radius: 10px;
+  border: 2px solid #FF9E01;
+  outline: none;
+  font-size: 1.2em;
+  color: #04045E;
+  min-width: 200px;
+  z-index: 2;
+}
+
+.ccis-logo{
+  position: absolute;
+  top: 10vh;
+  right: 1vw;
+  width: 35%;   
+  min-width: 400px; 
+  z-index: 2;
+}
+
+.bt-1{
+  position: absolute;
+  top:90px;
+  right: 50px;
+  width: 70%;
+  height: 70%;
+  z-index: 0;
+  pointer-events: none;
+}
+.bt-2{
+  position: absolute;
+  left: -300px;
+  top: 80px;
+  width: 50%;
+  height: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.bt-3{
+  position: absolute;
+  left: -80px;
+  bottom: -5px;
+  width: 80%;
+  height: 80%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.featuresSection{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  background-color: #f7f7f7;
+  position: relative;
+  color: #04045E;
+  z-index: 1;
+}
+.featuresHeader{
+  width: 50%;
+  height: 20%;
+  background-color: none;
+  font-size: 2.5vw;
+  box-sizing: border-box;
+  padding: 0.7em;
+  margin: 1em 0;
+}
+.feature-summary-card{
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: 90%;
+  width: 90%;
+  min-width: 500px;
+  background-color: transparent;
+  margin: 0.4em 0;
+  padding: 1em;
+  box-sizing: border-box;
+  z-index: 0;
+  flex-wrap: wrap;
+  
+}
+.floating-ccis{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  right: 30px;
+  bottom: 100px;
+  flex-direction: row;
+  height: 60%;
+  width: 3%;
+  font-size: 4em;
+  flex-wrap: wrap;
+  background-color: transparent;
+  margin: 0 0 0 0.5em;
+  z-index: 1;
+  pointer-events: none;
+}
+.card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 27%;
+  height: 15em;
+  margin: 1em;
+  background-color: #f7f7f7;
+  border: 1px solid #04045E;
+  border-radius: 15px;
+  padding: 0.6em;
+  box-sizing: border-box;
+  z-index: 5;
+  min-width: 250px;
+}
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 0.5em;
+
+}
+.card-container img{
+  width: 50%;
+  height: auto;
+  min-width: 150px;
+  background-color: transparent;
+}
+
+.triangle-background-1{
+  position: absolute;
+  width: 100vw;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  }
+
+  
+
+
+

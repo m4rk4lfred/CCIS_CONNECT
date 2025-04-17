@@ -6,13 +6,19 @@ import blurryTriangleBlue from './assets/blurryBlueTriangle.svg'
 import './App.css'
 
 
-function App() {
+function Home() {
+  {/* This state variable manages the value of the input box. */}
+  {/* 'text' holds the current state (i.e., the current value of the input). */}
+  {/* 'setText' is the function used to update the state with a new value. */}
+  {/* When the user types in the input, 'setText' updates 'text', causing the component to re-render. */}
+  {/* The first value is the current state, and the second is the updater function—not the new state itself. */}
+  {/* The initial state is an empty string, so the input box starts off blank. */}
   const [text , setText] = useState("");
   return (
     <>
     <header>  
       
-        <div className="header-branding-div"> 
+        <div className="header-branding-div" id='HomeSection'> 
             <img src={brandingLogo} alt="ccis.logo" className="header-logo"/>
             <h1><span className="design-1">C</span>CIS <span className="design-1">C</span>ONNECT</h1>
         </div>
@@ -20,10 +26,10 @@ function App() {
   
         <nav>       
              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#HomeSection">Home</a></li>
+                <li><a href="#FeaturesSection">Features</a></li>
+                <li><a href="#AboutSection">About</a></li>
+                <li><a href="#ContactSection">Contact</a></li>
                 <li><a href="#sign">Sign up</a></li>
              </ul>
         </nav>
@@ -61,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

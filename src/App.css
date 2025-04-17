@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: "Jersey 20", sans-serif;
+  scroll-behavior: smooth;
 }
 header{
   display: flex;
@@ -293,7 +294,178 @@ z-index: 2;
   pointer-events: none;
   }
 
-  
+  .about-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    background-color: transparent;
+  }
+  .about-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #04045E;
+    color: #FF9E01;
+    box-sizing: border-box;
+    padding: 1em;
+    border-top: 5px solid #FF9E01;
+    border-bottom: 5px solid #FF9E01;
+  }
+  .about-header h3{
+     font-size: 4em;
+  }
+
+  .about-header p{
+    font-size: 1.4em;
+    padding: 1em 5em;
+    text-align: center;
+ }
+ .about-card-container{
+    background-color: #FF9E01;
+    width: 25em;
+    padding: 2em;
+    min-width: 250px; 
+    min-height: 250px; 
+    border-radius: 15px;
+    border: 1px solid #04045E;
+    color: #04045E;
+ }
+ .about-card-container p{
+  font-size: 1.5em;
+  text-align: justify;
+ }
+ .about-card-container h4{
+  font-size: 3.5em;
+  margin: 0.2em 0;
+}
+.about-layout-card-right{
+  background-color:transparent;
+  display: flex;
+  box-sizing: border-box;
+  padding: 2em 5em;
+}
+
+.about-layout-card-left{
+  background-color:transparent;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 2em 5em;
+
+}
+
+.about-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #04045E;
+  color: #FF9E01;
+  box-sizing: border-box;
+  padding: 1em;
+  margin: 5em 0 3em 0;
+  border-top: 5px solid #FF9E01;
+  border-bottom: 5px solid #FF9E01;
+}
+
+.about-footer p{
+  font-size: 2.1em;
+  padding: 0.8em 4em;
+  text-align: center;
+}
+
+.contact-content{
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+   height: 100%;
+   background-color: transparent;
+}
+
+.contact-header{
+   width: 100%;
+   height: auto;
+   background-color: transparent;
+   color: #04045E;
+   padding: 1em;
+   font-size: 2.3em;
+}
+.contact-body{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: auto;
+   background-color: transparent;
+   justify-content: center;
+   align-items: center;
+}
+.contact-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  height: 20em;
+  padding: 1em;
+  margin: 1.4em 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 25px;
+  flex-direction: column;
+}
+
+.contact-card img{
+  padding: 1em;
+}
+.contact-card p{
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+.contact-card button{
+  font-size: 2vw;
+  text-align: center;
+  padding: 0.3em;
+  border-radius: 100px;
+  background-color: #04045E;
+  color: #FF9E01;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-card button:hover{
+  background-color: transparent;
+  color: #04045E;
+  border: 2px solid #FF9E01;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 1.5em;
+  background-color: #04045E;
+  color: snow;
+  border-top: 2px solid #FF9E01;
+  border-bottom: 2px solid #FF9E01;
+}
+.footer-content h1{
+    font-size: 45px;
+    margin: 0.5em 0;
+}
+.footer-cri{
+  align-self: center;
+  justify-self: center;
+  margin-top: 25px;
+}
+
 
 
 

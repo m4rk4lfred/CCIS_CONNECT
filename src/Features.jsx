@@ -6,7 +6,7 @@ import backgroundTriangle from './assets/triangleBackground.svg'
 function Features(){
    return(
     <>
-       <div className="featuresSection">
+       <div className="featuresSection" id='FeaturesSection'>
             <div className="featuresHeader">
                 <h2><span className='design-1'>E</span>xplore the Features of CCIS Connect</h2>
             </div>

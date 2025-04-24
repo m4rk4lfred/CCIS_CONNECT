@@ -6,7 +6,8 @@ import FeaturesSection from './Features'
 import AboutSection from './AboutSection'
 import ContactSection from './ContactSection'
 import Footer from './Footer'
-
+import Signup from './Signup'
+import Login from './Login'
 
 
 

@@ -4,7 +4,7 @@ import AboutCard from './AboutSectionCard'
 function AboutSection(){
   return(    
   <>
-  
+  {/*About section component fragment*/}
   <div className="about-container" id='AboutSection'>
     
      <div className="about-header">

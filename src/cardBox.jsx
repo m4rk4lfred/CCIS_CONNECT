@@ -2,6 +2,7 @@ import './App.css';
 
 
 function CardBox(props){
+  {/*card component for the features */}
     return(
         <>
            <div className="card-container">

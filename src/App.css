@@ -4,6 +4,9 @@
   font-family: "Jersey 20", sans-serif;
   scroll-behavior: smooth;
 }
+a{
+  cursor: pointer;
+}
 header{
   display: flex;
   background-color: #ffffff;
@@ -108,8 +111,8 @@ nav a{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
-  height: 65%;
+  width: 55%;
+  height: 69%;
   background-color: transparent;
   font-size: 3rem;
   padding: 1em;
@@ -144,7 +147,7 @@ z-index: 2;
 background-color: transparent;
 width: 45%;
 height: 4em;
-margin: 1em 3em;
+margin: 1.5em 3em;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -466,6 +469,165 @@ footer{
   margin-top: 25px;
 }
 
+.credential-content-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(156, 156, 156,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.credential-container{
+   background-color: #ffffff;
+   width: 33%;
+   height: auto;
+   min-width: 300px;
+   padding: 1em;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   flex-shrink: 1;
+ 
+}
+
+.Signup-content-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.Login-content-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.Login-container{
+  height: auto;
+}
+.Login-container section{
+  margin: 1em 0;
+}
+.Signup-header , .Login-header{
+  display: flex;
+  font-size: 1.5em;
+  padding: 0.8em;
+  color: #04045E;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.Signup-header button, .Login-header button{
+  width: 1.2em;
+  height: 1.2em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #04045E;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.Signup-header button:hover, .Login-header button:hover{
+   color: red;
+}
+
+.Signup-section , .Login-section{
+  background-color: #ffffff;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4em;
+  box-sizing: border-box;
+  padding: 0.5em;
+  color: #04045E;
+
+}
+.Signup-section input , .Login-section input {
+   height: 2em;
+   border-radius: 10px;
+   border: 1px solid #04045E;
+   outline: none;
+   padding: 0.3em;
+   background-color: transparent;
+   margin: 0.2em;
+}
+
+.Signup-section button , .Login-section button{
+  width: 50%;
+  height: 2.2em;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  font-size: 0.7em;
+  background-color: transparent;
+  color: #04045E;
+  outline: none;
+  border: 1px solid #04045E;
+  transition: all 0.2s ease-in-out;
+}
+.Signup-section p{
+  font-size:15px;
+  margin: 5px 5px 5px 5px;
+}
+.Signup-section a{
+  font-size:15px;
+  margin: 5px 5px 5px 5px;
+  color: #04045E;
+}
+.Signup-section a:hover{
+  color: #FF9E01;
+
+}
+
+.Signup-section button:hover{
+  border: 1px solid #FF9E01;
+  color: #FF9E01;
+}
+dialog{
+  border: none;
+}
+.createaccount-section{
+  display: flex;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0em 1.5em;
+  color: #04045E;
+}
+.createaccount-section a{
+  color: #04045E;
+  margin: 0 0.2em;
+}
+.createaccount-section a:hover{
+  color: #FF9E01;
+}
+.invalid-credentials{
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  background-color: rgb(207, 15, 71 , 0.3);
+  color: red;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border-radius: 0.3em;
+
+}
 
 
 

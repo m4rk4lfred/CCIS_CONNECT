@@ -1,6 +1,7 @@
 import './App.css'
 
 function AboutSectionCard(){
+   {/*card component for the about section*/}
    return(
     <>
        <div className="about-card-container">

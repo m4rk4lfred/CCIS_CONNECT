@@ -1,6 +1,7 @@
 import './App.css'
 import logo from './assets/emailLogo.svg'
 function Footer(){
+   {/*Return the footer component*/}
     return(
         <>
         <footer className="footer-content">

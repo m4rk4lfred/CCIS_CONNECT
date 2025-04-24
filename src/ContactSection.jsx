@@ -2,6 +2,7 @@ import './App.css';
 import EmailLogo from './assets/emailLogo.svg'
 
 function ContactSection(){
+    {/*this will return the contact component*/}
      return(
         <>
 

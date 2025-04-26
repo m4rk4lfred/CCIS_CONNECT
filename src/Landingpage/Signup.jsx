@@ -1,5 +1,5 @@
 import { useState , useEffect } from 'react';
-import './App.css';
+import '../Css/Landingpage-inputCredentials.css'
 
 
 function Signup({ email, closeSignup, loginShow, signupShow }) {
@@ -23,7 +23,7 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
   return (
     <>
       {/* Signup Modal Dialog */}
-      <dialog className="Signup-content-container credential-content-container">
+      <dialog className="Signup-content-container credential-content-container" open>
         <div className="Signup-container credential-container">
           {/* Header Section with Title and Close Button */}
           <div className="Signup-header">

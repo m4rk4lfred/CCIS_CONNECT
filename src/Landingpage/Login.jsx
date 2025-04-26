@@ -1,9 +1,9 @@
-import './App.css'
+import '../Css/Landingpage-inputCredentials.css'
 
 function Login({closeLogin , showlogin,showsignup}){
     return(
         <>
-      <dialog className="Login-content-container credential-content-container" id='login'>
+      <dialog className="Login-content-container credential-content-container" id='login' open>
         <div className="Login-container credential-container">
             <div className="Login-header">
                 <h1>LOG<span className='design-1'>IN</span></h1>

@@ -1,13 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './app.css'
-import HomeSection from './Home.jsx'
-import FeaturesSection from './Features'
-import AboutSection from './AboutSection'
-import ContactSection from './ContactSection'
-import Footer from './Footer'
-import Signup from './Signup'
-import Login from './Login'
+import HomeSection from './Landingpage/Home.jsx'
+import FeaturesSection from './Landingpage/Features.jsx'
+import AboutSection from './Landingpage/AboutSection.jsx'
+import ContactSection from './Landingpage/ContactSection.jsx'
+import Footer from './Landingpage/Footer.jsx'
+
 
 
 

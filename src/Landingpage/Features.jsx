@@ -1,7 +1,7 @@
-import './App.css';
-import CardBox from './cardBox';  {/*importing the cardBox component*/}
-import brandingIcon from './assets/ccislogo.svg'
-import backgroundTriangle from './assets/triangleBackground.svg'
+import '../Css/Landingpagecss/Features.css';
+import CardBox from '../Landingpage/cardBox';  {/*importing the cardBox component*/}
+import brandingIcon from '../assets/ccislogo.svg'
+import backgroundTriangle from '../assets/triangleBackground.svg'
 
 function Features(){
      {/*this will return the feature component*/}

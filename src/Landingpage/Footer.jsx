@@ -1,5 +1,5 @@
-import './App.css'
-import logo from './assets/emailLogo.svg'
+import '../Css/Landingpagecss/Footer.css';
+import logo from '../assets/emailLogo.svg'
 function Footer(){
    {/*Return the footer component*/}
     return(

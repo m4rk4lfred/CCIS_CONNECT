@@ -1,0 +1,116 @@
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #f7f7f7;
+  position: relative;
+  color: #04045E;
+  z-index: 1;
+}
+
+.featuresHeader {
+  width: 75%;
+  height: 20%;
+  background-color: aqua;
+  background-color: none;
+  font-size: clamp(16px, 2.5vw, 65px);
+  box-sizing: border-box;
+  padding: 0.7em;
+  margin: 1em 0;
+  
+}
+
+.feature-summary-card {
+  display: flex;
+  justify-self: center;
+  align-items: flex-start;
+  height: 90%;
+  width: 90%;
+  min-width: 500px;
+  background-color: transparent;
+  margin: 0.4em 0;
+  padding: 1em;
+  box-sizing: border-box;
+  z-index: 0;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.floating-ccis {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  right: 0; /* Position it at the right-most edge */
+  top: 50%; /* Position it at the vertical center */
+  transform: translateY(-400%); /* Adjust for the element's height to center it perfectly */
+  flex-direction: row;
+  height: auto; /* Allow height to adjust based on content */
+  width: auto; /* Allow width to adjust based on content */
+  max-width: 50px; /* Optional: Set a maximum width */
+  max-height: 50px; /* Optional: Set a maximum height */
+  font-size: 4em;
+  flex-wrap: wrap;
+  background-color: transparent;
+  margin: 0; /* Remove unnecessary margins */
+  z-index: 1;
+  pointer-events: none;
+  flex-shrink: 1;
+}
+
+.triangle-background-1 {
+  position: absolute;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 27%;
+    height: 30%;
+    margin: 0;
+    background-color: #f7f7f7;
+    border: 1px solid #04045E;
+    border-radius: 15px;
+    padding: 0.6em;
+    box-sizing: border-box;
+    z-index: 5;
+    min-width: 25px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  
+  .card-container img {
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    flex-shrink: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .floating-ccis {
+      max-width: 30px; /* Reduce size for smaller screens */
+      max-height: 30px;
+      font-size: 2em; /* Adjust font size */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .floating-ccis {
+      display: none;
+    }
+  }

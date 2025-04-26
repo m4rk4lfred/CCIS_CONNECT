@@ -1,4 +1,4 @@
-import './App.css'
+import '../Css/Landingpagecss/About.css';
 import AboutCard from './AboutSectionCard'
 
 function AboutSection(){

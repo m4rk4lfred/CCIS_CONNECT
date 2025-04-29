@@ -1,7 +1,6 @@
 import { useState , useEffect } from 'react';
 import '../Css/Landingpage-inputCredentials.css'
 
-
 function Signup({ email, closeSignup, loginShow, signupShow }) {
   const [emptyEmail, setEmail] = useState("");
   const [password , setPassword] = useState("");
@@ -11,19 +10,48 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
       setEmail(email);
   }},[email]);
 
-  const handleSubmit = (e) => {           {/*Function to handle inputs*/}
-      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-      if(password != confirmPassword || !emailPattern.test(emptyEmail)){
-        e.preventDefault();
-         alert("Enter a valid credentials");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const emailPattern = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+    if (password !== confirmPassword || !emailPattern.test(emptyEmail)) {
+      alert("Enter valid credentials");
+      return;
+    }
+  
+    const studentId = document.getElementById("student_id-input").value;
+    
+    try {
+      const response = await fetch("http://localhost/CCIS_CONNECT-MASTER/src/php/signup.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: emptyEmail,
+          student_id: studentId,
+          password: password
+        })
+      })
+      ;
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        alert("Signup successful!");
+        closeSignup(false);
+      } else {
+        alert("Signup failed: " + result.error);
       }
-
-
-  }
+    } catch (err) {
+      alert("Error signing up: " + err.message);
+    }
+  };
+  
   return (
     <>
       {/* Signup Modal Dialog */}
-      <dialog className="Signup-content-container credential-content-container" open>
+      <dialog className="Signup-content-container credential-content-container">
         <div className="Signup-container credential-container">
           {/* Header Section with Title and Close Button */}
           <div className="Signup-header">
@@ -43,9 +71,10 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
                 <input
                   type="text"
                   name="email-input"
+                  id="email-input"
                   onChange={(e) => setEmail(e.target.value)}
                   value={emptyEmail}
-                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                   title="Please Enter a valid email"
                   required
                 />
@@ -70,6 +99,7 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
                 <input
                   type="password"
                   name="password-input"
+                  id ="password-input"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required

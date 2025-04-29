@@ -12,7 +12,7 @@
 .featuresHeader {
   width: 75%;
   height: 20%;
-  background-color: aqua;
+  background-color: transparent;
   background-color: none;
   font-size: clamp(16px, 2.5vw, 65px);
   box-sizing: border-box;

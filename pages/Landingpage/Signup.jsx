@@ -1,10 +1,11 @@
 import { useState , useEffect } from 'react';
-import '../Css/Landingpage-inputCredentials.css'
+import '../../src/Css/Landingpage-inputCredentials.css';
 
 function Signup({ email, closeSignup, loginShow, signupShow }) {
   const [emptyEmail, setEmail] = useState("");
   const [password , setPassword] = useState("");
   const [confirmPassword , setconfirmPassword] = useState("");
+  const [invalidCredentials , setInvalidCredentials] = useState(false);
 
   useEffect(()=>{if(email){  // useEffect to set the passed email from the parent component, making it editable
       setEmail(email);
@@ -15,14 +16,14 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
   
     const emailPattern = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
     if (password !== confirmPassword || !emailPattern.test(emptyEmail)) {
-      alert("Enter valid credentials");
+      setInvalidCredentials(true);
       return;
     }
   
     const studentId = document.getElementById("student_id-input").value;
     
     try {
-      const response = await fetch("http://localhost/CCIS_CONNECT-MASTER/src/php/signup.php", {
+      const response = await fetch("http://localhost/CCIS_Connect/src/php/signup.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -36,15 +37,15 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
       ;
   
       const result = await response.json();
-  
       if (result.success) {
         alert("Signup successful!");
         closeSignup(false);
+
       } else {
         alert("Signup failed: " + result.error);
       }
     } catch (err) {
-      alert("Error signing up: " + err.message);
+      console.error("Error signing up: " + err.message);
     }
   };
   
@@ -119,21 +120,21 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
                 {/* Link to login page for users with existing accounts */}
                 <p>Have an account already? <a onClick={() => { loginShow(true); signupShow(false); }}>Click here to log in.</a></p>
               </section>
-  
-              {/* Invalid Credentials Section (For error messages) */}
-              <section className="invalid-credentials">
+              {invalidCredentials && 
+              (<section className="invalid-credentials">
                 <p>Invalid credentials, please verify and retry</p>
-              </section>
-  
+              </section> )
+              }
               {/* Submit Button */}
               <section className="submit-section Signup-section">
                 <button type='submit'>Sign Up</button>
               </section>
-  
+             
             </form>
           </div>
         </div>
       </dialog>
+
     </>
   );
   

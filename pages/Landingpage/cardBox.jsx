@@ -1,4 +1,4 @@
-import '../Css/Landingpagecss/Features.css'
+import '../../src/Css/Landingpagecss/Features.css'
 
 
 function CardBox(props){

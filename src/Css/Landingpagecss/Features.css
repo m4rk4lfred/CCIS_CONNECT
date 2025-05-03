@@ -26,15 +26,15 @@
   justify-self: center;
   align-items: flex-start;
   height: 90%;
-  width: 90%;
-  min-width: 500px;
+  width: 100%;
   background-color: transparent;
-  margin: 0.4em 0;
+  margin: 0.4em 0 0.4em 1em;
   padding: 1em;
   box-sizing: border-box;
   z-index: 0;
   flex-wrap: wrap;
   gap: 1em;
+
 }
 .floating-ccis {
   display: flex;
@@ -43,16 +43,16 @@
   align-items: center; /* Center content vertically */
   right: 0; /* Position it at the right-most edge */
   top: 50%; /* Position it at the vertical center */
-  transform: translateY(-400%); /* Adjust for the element's height to center it perfectly */
+  transform: translateY(-400%);
   flex-direction: row;
-  height: auto; /* Allow height to adjust based on content */
-  width: auto; /* Allow width to adjust based on content */
-  max-width: 50px; /* Optional: Set a maximum width */
-  max-height: 50px; /* Optional: Set a maximum height */
+  height: auto; 
+  width: auto; 
+  max-width: 50px; 
+  max-height: 50px; 
   font-size: 4em;
   flex-wrap: wrap;
   background-color: transparent;
-  margin: 0; /* Remove unnecessary margins */
+  margin: 0; 
   z-index: 1;
   pointer-events: none;
   flex-shrink: 1;
@@ -83,6 +83,7 @@
     box-sizing: border-box;
     z-index: 5;
     min-width: 25px;
+    max-width: 295px;
   }
   
   .image-container {
@@ -103,14 +104,54 @@
 
   @media screen and (max-width: 768px) {
     .floating-ccis {
-      max-width: 30px; /* Reduce size for smaller screens */
+      max-width: 30px; 
       max-height: 30px;
-      font-size: 2em; /* Adjust font size */
+      font-size: 2em; 
     }
   }
   
   @media screen and (max-width: 480px) {
     .floating-ccis {
       display: none;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 27%;
+      height: 20%;
+      margin: 0;
+      background-color: #f7f7f7;
+      border: 1px solid #04045E;
+      border-radius: 15px;
+      box-sizing: border-box;
+      z-index: 5;
+      min-width: 65px;
+    }
+    
+  }
+
+  @media screen and (max-width: 273px) {
+    .card-container{
+      background-color: #f7f7f7;
+      min-width: 150px;
+    }
+    .feature-summary-card {
+      display: flex;
+      justify-self: center;
+      align-items: flex-start;
+      height: 90%;
+      width: 100%;
+      background-color: #f7f7f7;
+      margin: 0.4em 0;
+      padding: 1em;
+      box-sizing: border-box;
+      z-index: 0;
+      flex-wrap: wrap;
+      gap: 1em;
     }
   }

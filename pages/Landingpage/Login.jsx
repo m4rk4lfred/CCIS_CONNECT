@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import '../Css/Landingpage-inputCredentials.css'
+import '../../src/Css/Landingpage-inputCredentials.css';
+import { useNavigate } from 'react-router-dom'
 
 function Login({ closeLogin, showlogin, showsignup }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,7 +16,7 @@ function Login({ closeLogin, showlogin, showsignup }) {
         formData.append('password', password);
 
         try {
-            const response = await fetch('http://localhost/CCIS_CONNECT-MASTER/src/php/login.php', {
+            const response = await fetch('http://localhost/CCIS_Connect/src/php/login.php', {
                 method: 'POST',
                 body: formData
             });
@@ -23,6 +25,7 @@ function Login({ closeLogin, showlogin, showsignup }) {
 
             if (result.success) {
                 alert("Login Sucessful, Tralalero Tralala");
+                navigate("/MainChat");
                 //redirect to a different page, sofar di ko alam pano or saan
             } else {
                 setError(result.message);

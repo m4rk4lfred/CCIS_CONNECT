@@ -1,4 +1,4 @@
-import '../Css/Landingpagecss/About.css';
+import '../../src/Css/Landingpagecss/About.css';
 
 function AboutSectionCard(){
    {/*card component for the about section*/}

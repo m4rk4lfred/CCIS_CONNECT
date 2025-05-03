@@ -1,14 +1,15 @@
 import { useState, useRef } from 'react'
-import blurryLogo from '../assets/ccislogo.svg'
-import brandingLogo from '../assets/ccis logo 1.svg'
-import blurryTriangleYellow from '../assets/blurryTriangle.svg'
-import blurryTriangleBlue from '../assets/blurryBlueTriangle.svg'
+import blurryLogo from '../../src/assets/ccislogo.svg'
+import brandingLogo from '../../src/assets/ccis logo 1.svg'
+import blurryTriangleYellow from '../../src/assets/blurryTriangle.svg'
+import blurryTriangleBlue from '../../src/assets/blurryBlueTriangle.svg'
 import Signup from '../Landingpage/Signup'
 import Login from '../Landingpage/Login'
-import Menu from '../assets/menu.svg'
-import Exit from '../assets/exit.svg'
-import HomeIcon from '../assets/home_icon.svg'
-import '../Css/Landingpagecss/Home.css'
+import Menu from '../../src/assets/menu.svg'
+import Exit from '../../src/assets/exit.svg'
+import HomeIcon from '../../src/assets/home_icon.svg'
+import '../../src/Css/Landingpagecss/Home.css';
+import { useNavigate } from 'react-router-dom'
 
 
 

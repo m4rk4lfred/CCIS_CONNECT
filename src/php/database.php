@@ -1,4 +1,14 @@
 <?php
+//dito magadjust ng dirs para di magulo nalang
+$user = "root";
+$pass = "";
+
+$conn = new mysqli('localhost', $user, $pass);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Check if the database exists, temporary muna para di kayo magcreate ng create
 $dbCheck = $conn->query("SHOW DATABASES LIKE 'ccisconnectusers'");
 if ($dbCheck->num_rows == 0) {
@@ -16,11 +26,12 @@ if ($dbCheck->num_rows == 0) {
     if (!$conn->query($createTableSQL)) {
         die("Error creating table: " . $conn->error);
     }
+}
 
-$conn = new mysqli('localhost', 'root', 'root', 'ccisconnectusers');
+
+$conn = new mysqli('localhost', $user, $pass , 'ccisconnectusers');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} //dito magadjust ng dirs para di magulo nalang
-}
+} 
 ?>

@@ -16,17 +16,17 @@
   background-color: #04045E;
   color: #FF9E01;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 1em 2em;
   border-top: 5px solid #FF9E01;
   border-bottom: 5px solid #FF9E01;
 }
 
 .about-header h3 {
-  font-size: 4em;
+  font-size: clamp(2em , 5vw ,10em);
 }
 
 .about-header p {
-  font-size: 1.4em;
+  font-size: clamp(1em, 2vw, 2.5em);
   padding: 1em 5em;
   text-align: center;
 }
@@ -43,7 +43,7 @@
 }
 
 .about-card-container p {
-  font-size: 1.5em;
+  font-size: clamp(1em, 2vw, 2.5em);
   text-align: justify;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .about-footer {
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -84,7 +84,37 @@
 }
 
 .about-footer p {
-  font-size: 2.1em;
+  font-size: clamp(1em, 2vw, 2.5em);
   padding: 0.8em 4em;
   text-align: center;
+}
+
+@media screen and (max-width:505px) {
+  .about-header p {
+    font-size: clamp(1em, 2vw, 2.5em);
+    padding: 1em 0.2em;
+    text-align: center;
+  }
+}
+@media screen and (max-width:475px) {
+  .about-card-container {
+    background-color: #FF9E01;
+    width: 25em;
+    padding: 2em;
+    min-width: 50px;
+    min-height: 20px;
+    border-radius: 15px;
+    border: 1px solid #04045E;
+    color: #04045E;
+  }
+
+
+  .about-card-container h4 {
+    font-size: clamp(1.4em , 5vw ,10em);
+    margin: 0.2em 0;
+  }
+  .about-card-container p{
+    font-size: clamp(0.7em, 2vw, 2.5em);
+  }
+
 }

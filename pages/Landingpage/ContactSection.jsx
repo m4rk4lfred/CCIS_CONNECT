@@ -1,5 +1,5 @@
-import '../Css/Landingpagecss/Contact.css';
-import EmailLogo from '../assets/emailLogo.svg'
+import '../../src/Css/Landingpagecss/Contact.css';
+import EmailLogo from '../../src/assets/emailLogo.svg'
 
 function ContactSection(){
     {/*this will return the contact component*/}

@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/CCIS_CONNECT/', 
   plugins: [react()],
+  historyApiFallback: true, // Add this line
 })

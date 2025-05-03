@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   background-color: transparent;
 }
 
+.design-1{
+  color: #FF9E01;
+}
 .about-header {
   display: flex;
   justify-content: center;

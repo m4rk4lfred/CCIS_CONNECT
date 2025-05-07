@@ -16,6 +16,7 @@ html,body{
     background-color: transparent;
     z-index: -2;
     box-sizing: border-box;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   
   a{
@@ -30,6 +31,7 @@ html,body{
     box-shadow: 0px 0px 50px 1px gray;
     justify-content: space-between;
     z-index: 9999;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   .header-logo{
     width: 11%;
@@ -128,6 +130,7 @@ html,body{
     flex-shrink: 1;
     z-index: 5;
     margin: 0.5em 1em;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   
   .home-left {
@@ -160,6 +163,7 @@ html,body{
   
   .homesection-lower {
     background-color: transparent;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   
   .homesection-email-div {
@@ -171,6 +175,7 @@ html,body{
     justify-content: center;
     align-items: center;
     z-index: 2;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   
   .homesection-email-div input {
@@ -184,6 +189,7 @@ html,body{
     color: #04045e;
     z-index: 2;
     margin-left: 6em;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   
   .submitButton {
@@ -196,6 +202,7 @@ html,body{
     transition: background-color 0.2s ease-in-out;
     font-size: 1.2em;
     z-index: 2;
+    font-family: "Jersey 20", "Poppins", sans-serif;
   }
   
   .submitButton:hover {

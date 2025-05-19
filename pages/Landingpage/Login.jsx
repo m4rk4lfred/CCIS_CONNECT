@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../../src/Css/Landingpage-inputCredentials.css';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function Login({ closeLogin, showlogin, showsignup }) {
     const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ function Login({ closeLogin, showlogin, showsignup }) {
         formData.append('password', password);
 
         try {
-            const response = await fetch('http://localhost/CCIS_Connect/src/php/login.php', {
+            const response = await fetch('http://localhost/CCIS_CONNECT-MASTER/src/php/login.php', {
                 method: 'POST',
                 body: formData
             });
@@ -24,9 +24,11 @@ function Login({ closeLogin, showlogin, showsignup }) {
             const result = await response.json();
 
             if (result.success) {
-                alert("Login Sucessful, Tralalero Tralala");
-                navigate("/Mainpage");
-                //redirect to a different page, sofar di ko alam pano or saan
+                // Store the username (studentID) in localStorage
+                localStorage.setItem('username', result.username);
+
+                alert("Login Successful!");
+                navigate("/Mainpage"); // Redirect to the main page
             } else {
                 setError(result.message);
             }
@@ -44,8 +46,7 @@ function Login({ closeLogin, showlogin, showsignup }) {
                         <button onClick={() => closeLogin(false)}>X</button>
                     </div>
                     <div className="Login-body">
-                        <form onSubmit={handleSubmit}> 
-                            {/* Kaw na bahala mag convert to email, baka may masira dito hahaha */}
+                        <form onSubmit={handleSubmit}>
                             <section className="username-section Login-section">
                                 <label htmlFor="username-input">Email</label>
                                 <input

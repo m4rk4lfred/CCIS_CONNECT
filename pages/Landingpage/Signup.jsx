@@ -23,7 +23,7 @@ function Signup({ email, closeSignup, loginShow, signupShow }) {
     const studentId = document.getElementById("student_id-input").value;
     
     try {
-      const response = await fetch("http://localhost/CCIS_Connect/src/php/signup.php", {
+      const response = await fetch("http://localhost/CCIS_CONNECT-MASTER/src/php/signup.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

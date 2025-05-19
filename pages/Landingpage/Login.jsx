@@ -25,7 +25,7 @@ function Login({ closeLogin, showlogin, showsignup }) {
 
             if (result.success) {
                 alert("Login Sucessful, Tralalero Tralala");
-                navigate("/Mainpage");
+                navigate("/Chatsection");
                 //redirect to a different page, sofar di ko alam pano or saan
             } else {
                 setError(result.message);

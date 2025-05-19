@@ -1,16 +1,18 @@
+/**
+ * Mainpage component serves as the main container for the application.
+ * It includes the Chatsection component, which handles the chat functionality.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered Mainpage component.
+ */
 import { StrictMode } from "react"
-import Sidebar from "./Chatsection/Sidebar"
-import Chatlist from "./Chatsection/Chatlist"
-import Chatbox from "./Chatsection/Chatbox"
-import "../../src/Css/Mainpage/Mainchat/Mainchat.css"
+import Chatsection from './Chatsection/Chatsection'
 
 function Mainpage(){
     return(
         <>
            <div className="Main-content">
-              <Sidebar/>
-              <Chatlist/>
-              <Chatbox/>
+                <Chatsection/>
            </div>
         </>
     );

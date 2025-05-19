@@ -6,17 +6,17 @@ function Chatbox(){
     <>
     <div className="Chatbox-content">
      <div className="Chatbox-header">
-        <p><b>Group name</b></p> {/*Pass nalang dito value nung chat*/}
+        <p><b>Group name</b></p> {/*Pass the chat value here*/}
       </div>
 
      <div className="Chatbox-body">
-          <div className="Chat-content">  {/*Dito yung div na paglalagyan ng message*/}
+          <div className="Chat-content">  {/*This is the div where messages will be placed*/}
              
           </div>
       </div>
 
       <div className="Chatbox-input">
-        <input type="text" />
+        <input type="text" placeholder="Type a message..." />
        <IoMdSend className='send-logo'/>
       </div>
      </div>
